@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+<body style="background-color: white;">
+<input id="input" pattern="[0-9]*" inputmode="numeric" title="0-9까지 숫자">
+<button type="button" onclick="clickA()">클릭해 보세요!</button>
+<div type="button">클릭해 22!</div>
+<script>
+    function clickA() {
+        Native.showMessage();
+    }
+
+    const input = document.getElementById("input");
+    input.oninput  = (e) => {
+        Native.showMessage(e.target.value);
+    }
+</script>
+</body>
+</html>
